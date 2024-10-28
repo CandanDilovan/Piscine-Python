@@ -1,6 +1,6 @@
 # PYTHON = py
 PYTHON = python3
-SCRIPT = tester.py
+SCRIPT = whatis.py
 
 run: 
 	@${PYTHON} ${SCRIPT}

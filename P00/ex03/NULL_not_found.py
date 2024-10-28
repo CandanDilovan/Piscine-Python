@@ -1,13 +1,15 @@
 def NULL_not_found(object: any) -> int:
-    str_list = ["List", "Tuple", "Set", "Dict", "str"]
-    type_list = [list, tuple, set, dict, str]
+    str_list = ["Nothing: None", "Cheese: nan", "Zero: 0 ", "Empty: ", "Fake: False"]
+    type_list = [None, float("NaN"), 0, '', bool]
     for a in range(5):
-        if type(object) == type_list[a]:
-            if a == 4:
-                print(object, "is in the kitchen :", type(object))
-                return 42
+        if a == 4 and type(object) == type_list[a]:
+                print(str_list[a], type(object))
+                return 0
+        elif type(object) == type(type_list[a]):
+            if a == 3 and object:
+                break
             else:
-                print(str_list[a], ":", type(object))
-                return 42
+                print(str_list[a], type(object))
+                return 0
     print("Type not found")
-    return 42
+    return 1
