@@ -21,7 +21,7 @@ def ft_tqdm(lst: range) -> None:
         if percent == 0 or percent > milestone + 1:
             milestone = percent
             load_bar = int((elem / lst.stop) * 100)
-        loading = "[" + "=" * load_bar + ">" + " " * (100 - load_bar) + "]"
+        loading = "|[" + "=" * load_bar + ">" + " " * (100 - load_bar) + "]|"
         print(f" {int(percent)}%", loading, elem, "/", lst.stop, end='\r')
         ft_sleep(1000000)
         yield elem
