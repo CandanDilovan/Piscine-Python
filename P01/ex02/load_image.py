@@ -15,7 +15,7 @@ def ft_load(path: str):
                 r, g, b = img_rgb.getpixel((x, y))
                 new_node = [r, g, b]
                 pixel.append(new_node)
-        real_array = np.array(pixel)
+        real_array = np.array(pixel).reshape(img_list)
         return real_array
     except (FileNotFoundError, IOError, TypeError) as msg:
         print(msg)
