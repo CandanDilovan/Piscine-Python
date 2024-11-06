@@ -19,3 +19,4 @@ def ft_load(path: str):
         return real_array
     except (FileNotFoundError, IOError, TypeError) as msg:
         print(msg)
+
