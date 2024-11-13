@@ -16,7 +16,7 @@ def main(path: str):
         plot.yaxis.set_major_formatter(EngFormatter())
         plt.legend()
         plt.show()
-    except (FileNotFoundError, IsADirectoryError, KeyboardInterrupt) as msg:
+    except (KeyboardInterrupt, AssertionError) as msg:
         print(msg)
 
 

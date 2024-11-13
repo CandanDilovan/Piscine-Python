@@ -6,5 +6,5 @@ def load(path: str) -> pd.DataFrame:
         df = pd.read_csv(path)
         df = pd.DataFrame(df)
         return df
-    except (FileNotFoundError, IsADirectoryError) as msg:
+    except (FileNotFoundError, IsADirectoryError, Exception) as msg:
         print(msg)

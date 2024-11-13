@@ -15,7 +15,7 @@ def main(path_income: str, path_life: str):
         plot.xaxis.set_major_formatter(EngFormatter())
         plt.xticks([300, 1000, 10000])
         plt.show()
-    except (FileNotFoundError, IsADirectoryError, KeyboardInterrupt) as msg:
+    except (KeyboardInterrupt, AssertionError) as msg:
         print(msg)
 
 
